@@ -41,7 +41,7 @@ public class Server {
         for(User client : users) {
             message.append(client.data().get("name")).append(';');
         }
-        server.send("4" + message.toString(), user);
+        server.send("4" + message, user);
     }
 
     static void onDisconnect(User user, IOException e) {
